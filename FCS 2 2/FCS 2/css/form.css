@@ -1,0 +1,40 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(5, 173, 162);
+    color: black;
+    
+}
+#title{
+    background-color: rgb(5, 173, 162);
+    color: black;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+.container {
+    width: 95%;
+    margin: auto;
+    background-color: white;
+    color: black;
+}
+#text{
+    text-align: center;
+    margin-top: 10px;
+}
+#survey-form {
+    text-align: center;
+}
+#description, .form-group{
+    text-align: center;
+    display: block;
+    padding-bottom: 6px;
+}
+
+.label-tab{
+    display: inline-block;
+    width: 54%;
+    text-align: center;
+}

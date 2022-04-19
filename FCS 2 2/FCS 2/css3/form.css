@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+
+}
+.header {
+  text-align: center;
+  background: white;
+}
+#title{
+  /*  background-color: white;
+    color: black;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: 20px;*/
+}
+.container p {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+#survey-form {
+    text-align: center;
+}
+/*#description, .form-group{
+    text-align: center;
+    display: block;
+    padding-bottom: 6px;
+}*/
+
+.label-tab{
+    display: inline-block;
+    width: 54%;
+    text-align: center;
+}
+/*Navigation Bar*/
+.navbar {
+  overflow: hidden;
+  float: center;
+  list-style-type: none;
+  background-color: #F2D349;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  float: center;
+}
+li {
+  display: inline-block;
+  border-left: solid 2pt;
+}
+ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 100px;
+  font-size: 18px;
+}
+ul li a:hover {
+  color: white;
+}
+/* Footer */
+.footer {
+  padding: 5px;
+  background-color: #5C6E58;
+  color: white;
+  text-align: center;
+}
+/*Block*/
+.column {
+  float: left;
+  background-color: white;
+  margin-left: 200px;
+  width: 30%;
+  padding: 5px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.block {
+  display: block;
+  border: solid ;
+  border-radius: 10px;
+  background-color: #8AA899;
+  color: whitesmoke;
+  padding: 50px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #F2D349;
+}
+
+/* Form */
+legend {
+  font-size: 20pt;
+  text-align: center;
+}
+fieldset {
+  border: none;
+  background-color: #EBECE4;
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+  font-size: 16pt;
+}
+input[type=text], [type=number], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=radio], [type=checkbox] {
+    margin: 10px;
+}
+input[type=submit] {
+  background-color: #8B8878;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 30px;
+  cursor: pointer;
+  display: block;
+  margin: 1.0em auto;
+  text-align: center;
+}

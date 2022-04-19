@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Rating | Rate Our Service</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css3/Past_Appointment.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+<!-- Project Logo -->
+<div class="header">
+  <img src="images/logo.png">
+</div>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <ul>
+      <li><a href="Home_Patient.php">Home</a></li>
+      <li><a href="Appointment.php">Appointment</a></li>
+      <li><a href="Past_Appointment.html">Rating</a></li>
+      <li><a href="Profile.html">Profile</a></li>
+      <li><a href="logout.php">Log Out</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <h1>Past Appointment(s)</h1>
+        <p>Your past appointments appear below. You may view your care summaries for more information on these past visits, including instructions from your provider(s).</p>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Feedback</th>
+        <th>Appointment</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="form.html"><button>Rate Now</button></a></td>
+        <td>Annual Check up<br>Anna Nguyen, MD</td>
+        <td>1/5/2022</td>
+        <td>7:15 AM</td>
+        <td>Fairfax Clinic - Falls Church</td>
+      </tr>
+      <tr>
+        <td><a href="form.html"><button>Rate Now</button></a></td>
+        <td>Internal Medicine<br>David Nguyen, MD</td>
+        <td>11/10/2021</td>
+        <td>10:30 AM</td>
+        <td>Fairfax Clinic - Falls Church</td>
+      </tr>
+      <tr>
+        <td><a href="form.html"><button>Rate Now</button></a></td>
+        <td>Established Patient Visit<br>Lee Nguyen, MD</td>
+        <td>3/25/2021</td>
+        <td>2:00 PM</td>
+        <td>Fairfax Clinic - Falls Church</td>
+      </tr>
+      <tr>
+        <td><a href="form.html"><button>Rate Now</button></a></td>
+        <td>Annual Check up<br>Anna Nguyen, MD</td>
+        <td>1/3/2021</td>
+        <td>9:45 AM</td>
+        <td>Fairfax Clinic - Falls Church</td>
+      </tr>
+      <tr>
+        <td><a href="form.html"><button>Rate Now</button></a></td>
+        <td>New Patient Visit<br>Khoa Nguyen, MD</td>
+        <td>1/5/2020</td>
+        <td>7:15 AM</td>
+        <td>Fairfax Clinic - Falls Church</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</body>
+
+<div class="footer">
+  <p>ISTM 6210 Capstone Project | Spring 2022</p>
+  <!-- Show current Date & Time -->
+  <p id="date" style="text-align: center; color: white; font-size: 10pt"></p>
+  <script>
+    document.getElementById("date").innerHTML = Date();
+  </script>
+</div>
+</html>

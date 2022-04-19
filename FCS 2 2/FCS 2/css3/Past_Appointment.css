@@ -1,0 +1,125 @@
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+  margin: 0;
+}
+.header {
+  text-align: center;
+  background: white;
+}
+
+/*Navigation Bar*/
+.navbar {
+  overflow: hidden;
+  float: center;
+  list-style-type: none;
+  background-color: #F2D349;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  float: center;
+}
+li {
+  display: inline-block;
+  border-left: solid 2pt;
+}
+ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 100px;
+  font-size: 18px;
+}
+ul li a:hover {
+  color: white;
+}
+
+/*Section 1*/
+.container {
+  text-align: center;
+  background-color: white;
+  padding-bottom: 10px;
+  font-size: 14pt;
+}
+h4 {
+  color: black;
+  font-size: 16pt;
+}
+.container p {
+  text-align: center;
+  margin-left: 240px;
+  border: dashed #F2D349;
+  text-indent: 50px;
+  padding: 30px;
+  width: 70%;
+  line-height: 30px;
+}
+/*Block*/
+.column {
+  float: left;
+  background-color: white;
+  margin-left: 200px;
+  width: 30%;
+  padding: 5px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.block {
+  display: block;
+  border: solid ;
+  border-radius: 10px;
+  background-color: #8AA899;
+  color: whitesmoke;
+  padding: 50px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #F2D349;
+}
+
+table{
+  border: none;
+  background-color: white;
+  padding: 10px;
+  width: 70%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 16pt;
+  
+}
+thead {
+  box-shadow: 0 5px 10px;
+}
+
+th {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+td {
+  padding: 1rem 2rem;
+}
+
+.footer {
+  padding: 5px;
+  background-color: #5C6E58;
+  color: white;
+  text-align: center;
+}
+</style>

@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>View Appointments</title>
+
+<!--CSS Styling Sheet---------------------------->
+<link rel="stylesheet" type="text/css" href="css3/AppointmentList.css" />
+<link rel="stylesheet" type="text/css" href="css/Home_Doctor.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!--poppins-font-family-------------------------->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
+
+<!--using-Font-Awesonm----------------------------->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+<!-- Project Logo -->
+<div class="header">
+  <img src="images/logo.png">
+</div>
+
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <ul>
+      <li><a href="Home_Doctor.php">Dashboard</a></li>
+      <li><a href="AppointmentList.html">Appointment</a></li>
+      <li><a href="#">Patients</a></li>
+      <li><a href="Rating_Doctor.php">Patient Reviews</a></li>
+      <li><a href="doctor_logout.php">Log Out</a></li>
+    </ul>
+  </div>
+
+<!--heading--------------------------->
+  <div class="AppView-heading">
+    <span>Appointments</span>
+    <h1>List of Appointments</h1>
+  </div>
+
+
+
+
+<!--creating a list box for appointments-->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Patient Name</th>
+            <th scope="col">Physician/Doctor</th>
+            <th scope="col">Appointment Time</th>
+            <th scope="col">Actions to Take</th>
+          </tr>
+        </thead>
+        <tbody>
+        <!--1st Patient------>
+          <tr>
+            <th scope="row">02/12</th>
+            <td>David Scott</td>
+            <td>Dr. Jhon J. Smith</td>
+            <td>8:00 AM</td>
+            <td>
+              <button type="button" class="btn btn-primary"><i class="far fa-eye"></i> Modify</button>
+              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i> Confirm</button>
+              <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Cancel</button>
+            </td>
+          </tr>
+        <!--2nd Patient-------->
+          <tr>
+            <th scope="row">03/05</th>
+            <td>Sofia Arias</td>
+            <td>Dr. Jhon J. Smith</td>
+            <td>8:30 AM</td>
+            <td>
+              <button type="button" class="btn btn-primary"><i class="far fa-eye"></i> Modify</button>
+              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i> Confirm</button>
+              <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Cancel</button>
+            </td>
+          </tr>
+        <!--4th Patient--------->
+          <tr>
+            <th scope="row">03/20</th>
+            <td>Jeffery Harris</td>
+            <td>Dr. Jhon J. Smith</td>
+            <td>9:30 AM</td>
+            <td>
+              <button type="button" class="btn btn-primary"><i class="far fa-eye"></i> Modify</button>
+              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i> Confirm</button>
+              <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Cancel</button>
+            </td>
+          </tr>
+        <!--5th Patient--------->
+          <tr>
+            <th scope="row">04/15</th>
+            <td>Breanna Madden</td>
+            <td>Dr. Jhon J. Smith</td>
+            <td>11:00 AM</td>
+            <td>
+              <button type="button" class="btn btn-primary"><i class="far fa-eye"></i> Modify</button>
+              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i> Confirm</button>
+              <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Cancel</button>
+            </td>
+          </tr>
+        <!--6th Patient--------->
+          <tr>
+            <th scope="row">05/25</th>
+            <td>Joe Jackson</td>
+            <td>Dr. Jhon J. Smith</td>
+            <td>12:30 PM</td>
+            <td>
+              <button type="button" class="btn btn-primary"><i class="far fa-eye"></i> Modify</button>
+              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i> Confirm</button>
+              <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Cancel</button>
+            </td>
+          </tr>
+        <!--7th Patient--------->
+          <tr>
+            <th scope="row">05/27</th>
+            <td>Christina Deleon</td>
+            <td>Dr. Jhon J. Smith</td>
+            <td>1:00 PM</td>
+            <td>
+              <button type="button" class="btn btn-primary"><i class="far fa-eye"></i> Modify</button>
+              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i> Confirm</button>
+              <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Cancel</button>
+            </td>
+          </tr>
+        <!--8th Patient--------->
+          <tr>
+            <th scope="row">06/18</th>
+            <td>William Young</td>
+            <td>Dr. Jhon J. Smith</td>
+            <td>1:15 PM</td>
+            <td>
+              <button type="button" class="btn btn-primary"><i class="far fa-eye"></i> Modify</button>
+              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i> Confirm</button>
+              <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Cancel</button>
+            </td>
+          </tr>
+        <!--9th Patient--------->
+          <tr>
+            <th scope="row">07/22</th>
+            <td>Jordan White</td>
+            <td>Dr. Jhon J. Smith</td>
+            <td>2:00 PM</td>
+            <td>
+              <button type="button" class="btn btn-primary"><i class="far fa-eye"></i> Modify</button>
+              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i> Confirm</button>
+              <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i> Cancel</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>
