@@ -65,7 +65,7 @@
 
                         <div class="col-lg-8 mx-auto col-12">
                           <a class="navbar-brand">
-                            <h1 class="hero-title text-center mb-5">Login to <strong><span>Patient Portal</span></strong></h1>
+                            <h1 class="hero-title text-center mb-5">Login to <strong><span>Admin Portal</span></strong></h1>
                           </a>
 
                             <div class="row">
@@ -75,7 +75,7 @@
                                       echo '<div class="alert alert-danger">' . $login_err . '</div>';
                                   }
                                   ?>
-                                    <form action="includes/patient_login.inc.php" method="post">
+                                    <form action="includes/admin_login.inc.php" method="post">
 
                                         <div class="form-floating mb-4 p-0">
                                             <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*"  class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>"  placeholder="Email address" required>
@@ -94,8 +94,8 @@
                                         </button>
 
                                         <p class="text-center">Don’t have an account? <a href="sign-up.php">Create One</a></p>
-                                        <p class="text-center">Login to <a href="physician_login.php">Physician Portal</a></p>
-                                       
+                                        <p class="text-center">Login to <a href="doctor_signin.php">Physical/Doctor Portal</a></p>
+                                        <p class="text-center"> <a href="#">Forgot password or email address</a></p>
 
                                     </form>
                                 </div>

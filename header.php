@@ -20,27 +20,54 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/Home_Patient.css" />
+    <link rel="stylesheet" href="./css/Home_Patient.css" />
     <link rel="stylesheet" type="text/css" href="css/Appointment.css">
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <title></title>
     <div class="header">
-     <img src="/images/logo.png">
+     <img src="./images/logo.png">
     </div>
     
 <div class="navbar row">
     <ul>
-        <?php 
+        <?php
           if (isset($_SESSION["patientID"])){
+            echo $_SESSION["patientID"];
+            echo "<p>Patient </p>";
             echo "<li><a href='home_patient.php'>Home</a></li>";
             echo "<li><a href='book_appointment.php'>Book Appointment</a></li>";
-            echo "<li><a href='Appointment.php'>Appointment</a></li>";
-            echo "<li><a href='Past_Appointment.html'>Rating</a></li>";
+            echo "<li><a href='my_appointment2.php'>My Appointment</a></li>";
             echo "<li><a href='patient_profile.php'>Profile</a></li>";
             echo "<li><a href='patient_login.php'>Log Out</a></li>";  
           }
+          else if (isset($_SESSION["physicianID"])){
+            echo $_SESSION["physicianID"];
+            echo "<p>Physician </p>";
+            echo "<li><a href='home_patient.php'>Home</a></li>";
+            echo "<li><a href='physician_schedule.php'>Physician Schedule</a></li>";
+            echo "<li><a href='physician_rating.php'>Rating</a></li>";
+            echo "<li><a href='patient_login.php'>Log Out</a></li>";
+            // echo "<li><a href='book_appointment.php'>Book Appointment</a></li>";
+            // echo "<li><a href='my_appointment2.php'>My Appointment</a></li>";
+            // echo "<li><a href='Past_Appointment.html'>Rating</a></li>";
+            // echo "<li><a href='patient_profile.php'>Profile</a></li>";
+            // echo "<li><a href='patient_login.php'>Log Out</a></li>";  
+          }
+          else if (isset($_SESSION["adminID"])){
+            echo $_SESSION["adminID"];
+            echo "<p>Admin </p>";
+            echo "<li><a href='home_patient.php'>Home</a></li>";
+            echo "<li><a href='admin_patient.php'>Patient</a></li>";
+            echo "<li><a href='admin_physician.php'>Physician</a></li>";
+            echo "<li><a href='patient_login.php'>Log Out</a></li>";
+          }
           else{
             echo "<li><a href='singup.php'>Sign up</a></li>";
-            echo "<li><a href='login.php'>Log In</a></li>";
+            echo "<li><a href='patient_login.php'>Log In</a></li>";
           }
         ?>
               
