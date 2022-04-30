@@ -56,9 +56,14 @@ function loginUser($conn, $email, $pw)
     if (strcmp($pw,$pwd) == 0)
     {
         session_start();
+        // id
         $_SESSION["patientID"] = $emailExists["id"];
         $_SESSION["physicianID"]=null;
         $_SESSION["adminID"] =null;
+        // NAME
+        $_SESSION["patientName"] = $emailExists["first_name"];
+        $_SESSION["physicianName"]=null;
+        $_SESSION["adminName"] =null;
         header("location: ../home_patient.php");
         exit();
     }
@@ -91,6 +96,10 @@ function loginPhysician($conn, $email, $pw)
         $_SESSION["physicianID"] = $emailExists["id"];
         $_SESSION["patientID"] = null;
         $_SESSION["adminID"] =null;
+
+        $_SESSION["patientName"] = null;
+        $_SESSION["physicianName"]=$emailExists["first_name"];
+        $_SESSION["adminName"] =null;
         header("location: ../home_patient.php");
         exit();
     }  
@@ -190,11 +199,11 @@ function createPatientUser($conn,$email,$password,$first_name, $last_name, $dob,
 
     if($result)
     {
-        header("location: ../signup.php?error=none");
+        header("location: ../register.php?error=none");
         exit();
     }
     else{
-        header("location: ../signup.php?error=failed");
+        header("location: ../register.php?error=failed");
         exit();
     }
     // Close connection
@@ -248,6 +257,30 @@ function editPatient($conn,$first_name,$middle_name,$last_name,$address,$email,$
     mysqli_close($conn);
 }
 
+function editPatientProfile($conn,$first_name,$middle_name,$last_name,$address,$email,$patient_id)
+{
+
+    $sql = "UPDATE patient set 
+    first_name='$first_name',
+    last_name='$last_name',
+    middle_name='$middle_name',
+    email='$email',
+    address='$address'     
+    where id=$patient_id;";
+
+    $result = mysqli_query($conn, $sql);
+    echo $sql;
+    if($result)
+    {
+        header("location: ../patient_profile.php?error=none");
+        exit();
+    }
+    else{
+        header("location: ../patient_profile.php?error=failed");
+        exit();
+    }
+    mysqli_close($conn);
+}
 function editPhysician($conn,$first_name,$middle_name,$last_name,$degree,$email,$patient_id)
 {
 
@@ -273,12 +306,12 @@ function editPhysician($conn,$first_name,$middle_name,$last_name,$degree,$email,
     mysqli_close($conn);
 }
     
-function createPhysicianSchedule($conn,$schedule_date,$schedule_start_time,$schedule_end_time,$physician_id)
+function createPhysicianSchedule($conn,$schedule_date,$schedule_start_time,$schedule_end_time,$physician_id,$schedule_day)
 {
 
-    $sql ="INSERT INTO physician_schedule (physician_id,appt_date,start_time, appt_end_time, appt_day, appt_status) values ($physician_id,'$schedule_date','$schedule_start_time','$schedule_end_time','Monday','In Process');";
+    $sql ="INSERT INTO physician_schedule (physician_id,appt_date,start_time, appt_end_time, appt_day, appt_status) values ($physician_id,'$schedule_date','$schedule_start_time','$schedule_end_time','$schedule_day','In Process');";
     $result = mysqli_query($conn, $sql);
-
+    
     echo $sql;
     if($result)
     {

@@ -11,7 +11,7 @@ require_once './includes/dbh.inc.php';
   INNER join patient p on p.id = apt.patient_Id
   INNER JOIN physician_schedule ps on ps.id = apt.physician_schedule_id
   INNER join physician phy on ps.physician_id = phy.id
-  where p.id=$patient_id and appt_status in ('Booked','Cancel','Completed');";
+  where p.id=$patient_id and appt_status in ('Booked','Cancel','Completed','Reviewed');";
 
   $query_run = mysqli_query($conn, $query);
 
@@ -25,7 +25,7 @@ require_once './includes/dbh.inc.php';
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"> Delete Student Data </h5>
+                    <h5 class="modal-title" id="exampleModalLabel"> Cancel this Appointment </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -97,8 +97,17 @@ require_once './includes/dbh.inc.php';
 
 <body>
 <div class="card">
+
+                <?php 
+                    if(isset($_GET["error"])){
+						if($_GET['error'] =="none")
+						{
+							echo '<div class="alert alert-success">Completed</div>';
+						}
+                    }
+                ?>
 		      		<!-- <form method="post"  > -->
-			      		<div class="card-header"><h3><b>Physician Schedule List </b></h3></div>
+			      		<div class="card-header"><h3><b>Patient Appointment</b></h3></div>
 			      		<div class="card-body">
 		      				<div class="table-responsive">
 		      					<table class="table table-striped table-bordered">

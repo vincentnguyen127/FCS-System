@@ -13,13 +13,14 @@ if(isset($_GET['deletedata']))
 
     if($query_run)
     {
-        echo '<script> alert("Data Deleted"); </script>';
-        header("Location:my_appointment2.php");
+        header("Location: my_appointment2.php?error=none");
+        exit();
     }
     else
     {
-        echo '<script> alert("Data Not Deleted"); </script>';
-        #header("Location:my_appointment2.php");
+  
+        header("Location: my_appointment2.php?error=none");
+        exit();
     }
 }
 

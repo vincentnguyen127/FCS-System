@@ -5,13 +5,13 @@
         $first_name = $_POST['first_name'];
         $middle_name = $_POST['middle_name'];
         $last_name = $_POST['last_name'];
-        $degree = $_POST['degree'];
+        $address = $_POST['address'];
         $email = $_POST['email'];
 
         require_once 'dbh.inc.php';
         require_once 'functions.inc.php';
     
-        editPhysician($conn,$first_name,$middle_name,$last_name,$degree,$email,$patient_id);
+        editPatientProfile($conn,$first_name,$middle_name,$last_name,$address,$email,$patient_id);
 
     }
     else{

@@ -19,12 +19,12 @@ if($result)
     $sql = "UPDATE physician_schedule set appt_status='Booked' where id=$physician_schedule_id";
     mysqli_query($conn,$sql);
     echo '<script> alert("Your Appointment is Booked"); </script>';
-    header("location: ../book_appointment.php");
+    header("location: ../book_appointment.php?error=none");
     exit();
 }
 else{
     echo '<script> alert("You can not book an appointment at this time"); </script>';
-    header("location: ../book_appointment.php");
+    header("location: ../book_appointment.php?error=failed");
     exit();
 }
 }

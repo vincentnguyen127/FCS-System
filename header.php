@@ -36,22 +36,20 @@
     <ul>
         <?php
           if (isset($_SESSION["patientID"])){
-            echo $_SESSION["patientID"];
-            echo "<p>Patient </p>";
+            echo '<p class="h3 text-danger">Welcome Patient: '.$_SESSION["patientName"].'</p>';
             echo "<li><a href='home_patient.php'>Home</a></li>";
             echo "<li><a href='book_appointment.php'>Book Appointment</a></li>";
             echo "<li><a href='my_appointment2.php'>My Appointment</a></li>";
             echo "<li><a href='patient_profile.php'>Profile</a></li>";
-            echo "<li><a href='patient_login.php'>Log Out</a></li>";  
+            echo "<li><a href='index.php'>Log Out</a></li>";  
           }
           else if (isset($_SESSION["physicianID"])){
-            echo $_SESSION["physicianID"];
-            echo "<p>Physician </p>";
+            echo '<p class="h3 text-danger">Welcome Physician: '.$_SESSION["physicianName"].'</p>';
             echo "<li><a href='home_patient.php'>Home</a></li>";
             echo "<li><a href='physician_schedule.php'>Physician Schedule</a></li>";
             echo "<li><a href='physician_rating.php'>Rating</a></li>";
-            echo "<li><a href='patient_login.php'>Log Out</a></li>";
-            // echo "<li><a href='book_appointment.php'>Book Appointment</a></li>";
+            echo "<li><a href='index.php'>Log Out</a></li>";
+            // echo "<li><a href='physician_profile.php'>Profile</a></li>";
             // echo "<li><a href='my_appointment2.php'>My Appointment</a></li>";
             // echo "<li><a href='Past_Appointment.html'>Rating</a></li>";
             // echo "<li><a href='patient_profile.php'>Profile</a></li>";
@@ -63,11 +61,12 @@
             echo "<li><a href='home_patient.php'>Home</a></li>";
             echo "<li><a href='admin_patient.php'>Patient</a></li>";
             echo "<li><a href='admin_physician.php'>Physician</a></li>";
-            echo "<li><a href='patient_login.php'>Log Out</a></li>";
+            echo "<li><a href='index.php'>Log Out</a></li>";
           }
           else{
-            echo "<li><a href='singup.php'>Sign up</a></li>";
-            echo "<li><a href='patient_login.php'>Log In</a></li>";
+            echo "<li><a href='register.php'>Sign up</a></li>";
+            echo "<li><a href='patient_login.php'>Patient Login</a></li>";
+            echo "<li><a href='physician_login.php'>Physician Login</a></li>";
           }
         ?>
               

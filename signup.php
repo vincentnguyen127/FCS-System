@@ -61,6 +61,16 @@ s
               </div>
           </nav>
 
+            <?php 
+                    if(isset($_GET["error"])){
+                        if ($_GET["error"] == "none") {
+                            echo '<div class="alert alert-success">Your Account Has Been Created Successfully</div>';
+                        }
+                        elseif($_GET['error'] =="usernametaken"){
+                            echo '<div class="alert alert-danger">Username/Email already taken</div>';
+                        }
+                    }
+                ?>
             <section class="sign-in-form section-padding">
                 <div class="container">
                     <div class="row">
@@ -174,16 +184,7 @@ s
                         </div>
                     </div>
                 </div>
-                <?php 
-                    if(isset($_GET["error"])){
-                        if ($_GET["error"] == "none") {
-                            echo '<p style="color:red;" class="text-center">You have signed up!</p>';
-                        }
-                        elseif($_GET['error'] =="usernametaken"){
-                            echo '<p style="color:red;" class="text-center">Username/Email already taken !</p>';
-                        }
-                    }
-                ?>
+                
             </section>
         </main>
 

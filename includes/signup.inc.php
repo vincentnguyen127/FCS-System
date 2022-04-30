@@ -23,6 +23,6 @@ if (isset($_POST["submit"])){
     createPatientUser($conn,$email,$password,$first_name, $last_name, $dob, $contact_num, $gender, $marital_status, $address );
 }
 else {
-    header("location: ../signup.php");
+    header("location: ../register.php");
 }
 ?>

@@ -16,6 +16,14 @@ require_once './includes/dbh.inc.php';
 ?>
 <body>
 <div class="card">
+				<?php 
+                    if(isset($_GET["error"])){
+						if($_GET['error'] =="none")
+						{
+							echo '<div class="alert alert-success">Your Appointment Has Been Booked </div>';
+						}
+                    }
+                ?>
 		      		<!-- <form method="post"  > -->
 			      		<div class="card-header"><h3><b>Physician Schedule List</b></h3></div>
 			      		<div class="card-body">
@@ -156,8 +164,7 @@ $(document).ready(function(){
 					$('#appt_date').html(data['appt_date']);
 					$('#appt_day').html(data['appt_day']);
 				} else{
-					alert('Empty data');
-					
+					alert('Empty data');	
 				}
 			}
 		});
